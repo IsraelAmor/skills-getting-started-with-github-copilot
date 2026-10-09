@@ -73,14 +73,14 @@ La arquitectura es monolitica y ligera. Un unico proceso FastAPI sirve tanto la 
 
 ```mermaid
 flowchart TD
-    U[Usuario en navegador] --> R[/ GET /]
-    R --> F[FastAPI src/app.py]
-    F --> S[Archivos estaticos src/static]
-    U --> A[/ GET /activities /]
-    A --> F
-    U --> P[/ POST /activities/{activity}/signup /]
-    P --> F
-    F --> M[(Diccionario en memoria)]
+  U[Usuario en navegador] --> R["GET /"]
+  R --> F[FastAPI src/app.py]
+  F --> S[Archivos estaticos src/static]
+  U --> A["GET /activities"]
+  A --> F
+  U --> P["POST /activities/{activity}/signup"]
+  P --> F
+  F --> M[(Diccionario en memoria)]
 ```
 
 ### Componentes principales
